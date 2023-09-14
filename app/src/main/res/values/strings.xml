@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Identificador Dactilar</string>
+    <string name="nombre_de_usuario">Nombre de usuario:</string>
+    <string name="todo">TODO</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="button">Button</string>
+    <string name="todo2">TODO</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="pass">***************</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombre2">Nombre</string>
+    <string name="iniciar_con_huella">Iniciar con huella</string>
+    <string name="seleccione_la_tarjeta_deseada">Seleccione la tarjeta deseada</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="todo5">TODO</string>
+    <string name="enviar_dinero">Enviar dinero</string>
+    <string name="todo6">TODO</string>
+    <string name="todo7">TODO</string>
+    <string name="todo8">TODO</string>
+    <string name="todo9">TODO</string>
+    <string name="seleccione_la_opcion_deseada">Seleccione la opcion deseada</string>
+    <string name="seleccione_la_opcion_deseada2">Seleccione la opcion deseada</string>
+    <string name="ver_detalle2">Ver detalle</string>
+    <string name="bloquear2">Bloquear</string>
+    <string name="todo10">TODO</string>
+    <string name="bloquear3">Bloquear</string>
+    <string name="pagar3">Pagar</string>
+    <string name="ver_detalle3">Ver detalle</string>
+    <string name="todo11">TODO</string>
+</resources>

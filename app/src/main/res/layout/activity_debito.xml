@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1891D4"
+    tools:context=".Debito">
+
+    <ImageButton
+        android:id="@+id/btnDebito2"
+        android:layout_width="275dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/todo7"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/debito"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEnviarDinero"
+        android:layout_width="148dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/material_dynamic_neutral80"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:text="@string/enviar_dinero"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/btnBloquear"
+        android:layout_width="148dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/material_dynamic_neutral80"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:text="@string/bloquear2"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/btnDetalle"
+        android:layout_width="138dp"
+        android:layout_height="71dp"
+        android:backgroundTint="#1891D4"
+        android:text="@string/ver_detalle2"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:text="@string/seleccione_la_opcion_deseada2"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDebito2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
