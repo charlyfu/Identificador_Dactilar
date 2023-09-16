@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Inicio de sesion en BanCoppel")
-                .setSubtitle("Por favor introduce tu huella digital")
+                .setSubtitle("Por favor introduce tu huella en el lector")
                 .setNegativeButtonText("O utiliza patron o contraseña")
                 .build();
 
