@@ -14,8 +14,12 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.concurrent.Executor;
 
@@ -23,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE = 101010;
 
+    EditText username;
+    EditText password;
+    Button loginBoton;
     ImageView imagenHuella;
 
     private Executor executor;
@@ -35,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        username = findViewById(R.id.txtUsuario);
+        password = findViewById(R.id.txtContrasenia);
+        loginBoton = findViewById(R.id.btnIniciarSesion);
 
         imagenHuella = findViewById(R.id.btnHuella);
 
@@ -93,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Inicio de sesion en BanCoppel")
                 .setSubtitle("Por favor introduce tu huella en el lector")
-                .setNegativeButtonText("O utiliza patron o contraseña")
+                .setNegativeButtonText("utiliza patron o contraseña")
                 .build();
 
         // Prompt appears when user clicks "Log in".
@@ -111,7 +122,26 @@ public class MainActivity extends AppCompatActivity {
     //Boton ingresar
 
     public void Ingresar(View view){
-        Intent menu = new Intent(this, Home.class);
-        startActivity(menu);
+        if (username.getText().toString().equals("") && password.getText().toString().equals("")){
+            Toast.makeText(this, "Favor de ingresar usuario y contraseña", Toast.LENGTH_SHORT).show();
+        }
+        else if (username.getText().toString().equals("")){
+            Toast.makeText(this, "Capturar el nombre de usuario", Toast.LENGTH_SHORT).show();
+        }
+        else if (password.getText().toString().equals("")) {
+            Toast.makeText(this, "Capturar la contraseña", Toast.LENGTH_SHORT).show();
+        }
+        else if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+            Toast.makeText(this, "Login exitoso, Bienvenido a BanCoppel!", Toast.LENGTH_SHORT).show();
+            Intent menu = new Intent(this, Home.class);
+            startActivity(menu);
+            username.setText("");
+            password.setText("");
+        }else{
+            Toast.makeText(this, "Login fallido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
+            username.setText("");
+            password.setText("");
+        }
     }
 }
